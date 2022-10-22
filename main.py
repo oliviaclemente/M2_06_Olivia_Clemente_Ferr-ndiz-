@@ -25,5 +25,15 @@ print("")
 print("Ejercicio 3:")
 def imc(peso, altura): 
   imc= peso / (altura*altura)
-  if imc<18.5:
-  
+  if imc<18.50:
+    return "Bajo peso"
+  elif imc>= 18.50  and imc<=25.00:
+    return "Normal"
+  elif imc>= 25.00:
+    return "Sobrepeso"
+  elif imc>= 30.00:
+    return "Obesidad"
+
+peso= float(input("¿Cuantos kg pesa?"))
+altura= float(input("¿Cuantos m mide?"))
+print(imc(peso, altura))
